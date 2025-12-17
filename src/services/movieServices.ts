@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import type { FetchMoviesResponse } from "../types/movies.tsx";
+import type { FetchMoviesResponse } from "../types/movies.ts";
 
  async function fetchMovies(movie:string) {
   const url = 'https://api.themoviedb.org/3/search/movie?';

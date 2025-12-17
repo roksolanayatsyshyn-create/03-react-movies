@@ -7,7 +7,7 @@ import {MovieGrid} from "./MovieGrid/MovieGrid";
 import  MovieModal from "./MovieModal/MovieModal";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
-import fetchMovies from "./services/movieServices.tsx";
+import fetchMovies from "./services/movieServices.ts";
 import type { Movie } from "./types/movies";
 
 function App() {
@@ -46,7 +46,8 @@ const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 };
 
   return (
-  <>
+    
+  <div className={css.app}>
     <SearchBar onSubmit={handleSearch} />
     <Toaster position="top-right" />
 
@@ -66,7 +67,7 @@ const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
         onClose={() => setSelectedMovie(null)}
       />
     )}
-  </>
+  </div>
 );
 }
 export default App;

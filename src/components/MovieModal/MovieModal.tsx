@@ -60,7 +60,7 @@ if (!modalRoot) return null;
       </p>
     </div>
   </div>
-</div>, document.body
+</div>, modalRoot
 
   )
   

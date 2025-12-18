@@ -1,15 +1,15 @@
 import css from "./MovieGrid.module.css";
 import type { Movie } from "../../types/movie";
 
-export interface MovieGridProps{
-  onSelect:(movie:Movie)=>void;
-  movies:Movie[];
+export interface MovieGridProps {
+  onSelect: (movie: Movie) => void;
+  movies: Movie[];
 }
 
-export function MovieGrid({onSelect, movies}:MovieGridProps) {
+export function MovieGrid({ onSelect, movies }: MovieGridProps) {
   return (
-<ul className={css.grid}>
-{movies.map(movie => (
+    <ul className={css.grid}>
+      {movies.map((movie) => (
         <li key={movie.id} onClick={() => onSelect(movie)}>
           <div className={css.card}>
             {movie.poster_path && (
@@ -24,8 +24,6 @@ export function MovieGrid({onSelect, movies}:MovieGridProps) {
           </div>
         </li>
       ))}
-</ul>
-
-
-  )
+    </ul>
+  );
 }
